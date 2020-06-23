@@ -16,7 +16,6 @@ cat <<-EOF > /etc/v2ray/config.json
             "settings": {
                 "method": "aes-256-cfb",
                 "password": "$PASSWORD",
-                "ota": false
             }
         }
   ],
