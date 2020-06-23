@@ -1,0 +1,14 @@
+{
+	"name": "Shadowsocks",
+	"description": "Deploy Shadowsocks on Heroku.",
+	"keywords": ["Shadowsocks"],
+	"env": {
+		"PASSWORD": {
+			"description": "Shadowsocks Password",
+			"value": "ss123456"
+		}
+	},
+	"stack": "container",
+        "website": "https://github.com/VerSign010/v2ray-shadowsocks-heroku",
+        "repository": "https://github.com/VerSign010/v2ray-shadowsocks-heroku"
+}
