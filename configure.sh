@@ -4,26 +4,27 @@ curl -L -H "Cache-Control: no-cache" -o /v2ray.zip https://github.com/v2ray/v2ra
 mkdir /usr/bin/v2ray
 unzip /v2ray.zip -d /usr/bin/v2ray
 # Remove /v2ray.zip and other useless files
-rm -rf /v2ray.zip /usr/bin/v2ray/v2ray/config.json
-touch /usr/bin/v2ray/v2ray/config.json
+rm -rf /v2ray.zip /usr/bin/v2ray/config.json
+touch /usr/bin/v2ray/config.json
 # V2Ray new configuration
-cat <<-EOF > /usr/bin/v2ray/v2ray/config.json
+cat <<-EOF > /usr/bin/v2ray/config.json
 {
   "inbounds": [
   {
             "protocol": "shadowsocks",
-            "port": $PORT,
+            "port": 80,
             "settings": {
-                "method": "aes-256-cfb",
-                "password": "$PASSWORD",
+                "method": "aes-256-gcm",
+                "password": "$PASSWORD"
             }
         }
   ],
   "outbounds": [
-  {
-    "protocol": "freedom"
-  }
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
   ]
 }
 EOF
-/usr/bin/v2ray/v2ray/v2ray -config /usr/bin/v2ray/v2ray/config.json
+/usr/bin/v2ray/v2ray -config /usr/bin/v2ray/config.json
