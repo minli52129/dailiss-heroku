@@ -12,7 +12,7 @@ cat <<-EOF > /usr/bin/v2ray/config.json
   "inbounds": [
   {
             "protocol": "shadowsocks",
-            "port": 80,
+            "port": 443,
             "settings": {
                 "method": "aes-256-cfb",
                 "password": "$PASSWORD"
