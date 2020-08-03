@@ -1,14 +1,14 @@
 {
-	"name": "Shadowsocks",
-	"description": "Deploy Shadowsocks on Heroku.",
-	"keywords": ["Shadowsocks"],
+	"name": "dailiss",
+	"description": "self-use daili.",
+	"keywords": ["daili"],
 	"env": {
 		"PASSWORD": {
-			"description": "Shadowsocks Password",
+			"description": "daili Password",
 			"value": "ss123456"
 		}
 	},
 	"stack": "container",
-        "website": "https://https://github.com/VerSign010/v2ray-shadowsocks-heroku",
-        "repository": "https://github.com/VerSign010/v2ray-shadowsocks-heroku"
+        "website": "https://blog.384869.xyz",
+        "repository": "https://github.com/minli52129/dailiss-heroku"
 }
