@@ -14,7 +14,7 @@ cat <<-EOF > /usr/bin/v2ray/config.json
             "protocol": "shadowsocks",
             "port": 80,
             "settings": {
-                "method": "aes-256-gcm",
+                "method": "aes-256-cfb",
                 "password": "$PASSWORD"
             }
         }
